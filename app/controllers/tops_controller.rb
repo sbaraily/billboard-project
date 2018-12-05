@@ -41,7 +41,7 @@ class TopsController < ApplicationController
 
   private
     def top_params
-      params.require(:top).permit(:song_id)
+      params.require(:top).permit(:name)
     end
 
     def set_top

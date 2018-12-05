@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2018_11_30_013618) do
   end
 
   create_table "tops", force: :cascade do |t|
-    t.string "song_id"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
