@@ -1,2 +1,6 @@
-<h1>Tops#show</h1>
-<p>Find me in app/views/tops/show.html.erb</p>
+<h1>Tops</h1>
+<h1><%= @top.song_id %></h1>
+
+<% @top.each do |top| %>
+  <%= link_to top.song_id, top %>
+  <% end %>
