@@ -1,0 +1,9 @@
+<%= @top.id ? 'Edit Billboard Chart': 'Create Billboard Chart' %>
+
+<%= form_for @top do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :song_id %>
+  
+  <%= f.submit %>
+<% end %> 
+
