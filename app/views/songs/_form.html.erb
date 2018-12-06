@@ -1,6 +1,6 @@
-<%= form_with(model: @song, class: 'ui form') do |f| %>
+<%= form_for [@artist, @song] do |f| %>
   <%= f.label :title%>
   <%= f.text_field :title, required:true%>
 
-  <%= f.submit nil, class: 'ui button primary' %>
+  <%= f.submit %>
 <% end %>

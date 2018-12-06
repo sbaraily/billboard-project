@@ -1,6 +1,6 @@
 <h1>SONGS</h1>
-<%= link_to 'New Song', new_top_artist_song_path %>
+<%= link_to 'New Song', new_artist_song_path %>
 
-<% @song.each do |song| %>
-    <%= link_to song.title, song %>
+<% @songs.each do |song| %>
+    <%= link_to song.title, [@artist, song] %>
     <% end %>

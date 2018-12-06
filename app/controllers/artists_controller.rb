@@ -16,7 +16,7 @@ class ArtistsController < ApplicationController
   def create
     @artist = Artist.new(artist_params)
     if @artist.save
-      redirect_to top_artists_path
+      redirect_to artists_path
     else
       render :new
     end
@@ -36,7 +36,7 @@ class ArtistsController < ApplicationController
 
   def destroy
     @artist.destroy
-    redirect_to top_artists_path
+    redirect_to artists_path
   end
 
 
