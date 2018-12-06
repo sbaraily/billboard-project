@@ -2,10 +2,8 @@
 <%= link_to "Add New Song", new_song_path %>
 <%= link_to "Add New Artist", new_artist_path %>
 <%= link_to "Add New Chart", new_top_path	 %>
-
 <br />
 <br />
-
 <% @tops.each do |top| %>
   <%= link_to top.name, top %>
 <% end %>
