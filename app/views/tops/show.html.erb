@@ -1,6 +1,16 @@
-<h1>Tops</h1>
-<h1><%= @top.song_id %></h1>
+<h1><%= @top.name %></h1>
 
-<% @top.each do |top| %>
-  <%= link_to top.song_id, top %>
-  <% end %>
+
+<br />
+<br />
+<%= link_to 'Edit Top Chart', edit_top_path(@top) %>
+
+<br />
+<br />
+<%= link_to 'Delete Top Chart', @top, method: :delete %>
+
+<br />
+<br />
+<%= link_to 'Back to Main Page', root_path %>
+
+

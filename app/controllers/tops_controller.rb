@@ -27,7 +27,7 @@ class TopsController < ApplicationController
   end
 
   def update
-    if @top.update(sub_params)
+    if @top.update(top_params)
       redirect_to @top
     else
       render :edit

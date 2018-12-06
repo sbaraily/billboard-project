@@ -4,6 +4,9 @@ class CreateSongs < ActiveRecord::Migration[5.2]
       t.string :title
       t.integer :artist_id
       t.boolean :hit
+      t.belongs_to :artist
+      t.belongs_to :top
+      
 
       t.timestamps
     end

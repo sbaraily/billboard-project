@@ -1,4 +1,4 @@
-oclass ArtistsController < ApplicationController
+class ArtistsController < ApplicationController
   before_action :set_artist, only: [:show, :update, :edit, :destroy]
  
   def index
