@@ -1,8 +1,30 @@
-<h1>Billboard Top Charts</h1>	<h1>Billboard Top Charts</h1>
-<%= link_to "Add New Artist", new_artist_path %>	
-<%= link_to "Add New Chart", new_top_path	 %>	<%= link_to "Add New Chart", new_top_path	 %>
-<br />	<br />
-<br />	<br />
-<% @tops.each do |top| %>	<% @tops.each do |top| %>
-  <%= link_to top.name, top %>	  <%= link_to top.name[:id], top %>
+<h1>&nbsp;Billboard Top Charts</h1>
+<div class="ui divider"></div>
+<%= link_to "Add New Artist" , new_artist_path , class: "ui red basic button"%>
+<%= link_to "Add New Chart", new_top_path	, class: "ui red basic button" %>
+
+<div class="ui divider"></div>
+<br />
+<div class="eight column row">
+<% @tops.each do |top| %>
+  <div class = "bill">
+  <%= link_to top.name, top %>
+  <div class="ui divider"></div>
+  </div>
 <% end %>
+</div>
+
+<style>
+
+.bill{
+  min-height: 200px; max-width: 200px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px dotted black;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  box-shadow: 5px 7px;
+  float: left;
+}
+</style>
