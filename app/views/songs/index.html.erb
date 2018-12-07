@@ -1,11 +1,10 @@
-<h1>SONGS</h1>
-<%= link_to 'Add a New Song', new_artist_song_path %> <br /><br />
-<%= link_to 'Go Back', artists_path %> <br /><br />
-<%= "The List of Songs Added : " %><br /> <br />
-
-
-
+<h1>&emsp;SONGS</h1>
+<div class="ui divider"></div>
+&emsp;<%="The List of Songs Added : " %><br /> <br />
 <% @songs.each_with_index do |song, i| %>
-    <%= "#{i+1}. \t"  %>
+    &emsp;<%= "#{i+1}. \t"  %>
     <%= link_to song.title, [@artist, song] %> <br />
 <% end %>
+<div class="ui divider"></div>
+&emsp;<%= link_to 'Add a New Song', new_artist_song_path %> |
+<%= link_to 'Go Back', artists_path %> <br /><br />

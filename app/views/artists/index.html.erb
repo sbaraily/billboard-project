@@ -1,8 +1,12 @@
-<h1>Artists</h1>
-<%= link_to 'Create a New Artist', new_artist_path%><br /><br />
+<h1>&emsp; Artists</h1>
+<div class="ui divider"></div>
+<h3>List of Artists: </h3>
 
 
 <% @artist.each_with_index do |artist, i| %>
+    &emsp;
     <%= "#{i+1}. \t"  %>
     <%= link_to artist.name, artist %><br />
     <% end %>
+    <div class="ui divider"></div>
+    <%= link_to 'Create a New Artist', new_artist_path%><br />
