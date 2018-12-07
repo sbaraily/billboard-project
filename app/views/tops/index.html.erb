@@ -1,8 +1,7 @@
 <h1>Billboard Top Charts</h1>
-<%= link_to "Add New Artist", new_artist_path %>
 <%= link_to "Add New Chart", new_top_path	 %>
 <br />
 <br />
 <% @tops.each do |top| %>
-  <%= link_to top.name, top %>
+  <%= link_to top.name[:id], top %>
 <% end %>

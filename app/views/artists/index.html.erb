@@ -2,6 +2,7 @@
 <%= link_to 'Create a New Artist', new_artist_path%><br /><br />
 
 
-<% @artist.each do |artist| %>
+<% @artist.each_with_index do |artist, i| %>
+    <%= "#{i+1}. \t"  %>
     <%= link_to artist.name, artist %><br />
     <% end %>

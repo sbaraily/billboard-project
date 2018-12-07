@@ -1,6 +1,8 @@
 <h1>SONGS</h1>
-<%= link_to 'New Song', new_artist_song_path %>
+<%= link_to 'Add a New Song', new_artist_song_path %> <br /><br />
+<%= "The List of Songs Added : " %><br /> <br />
 
-<% @songs.each do |song| %>
-    <%= link_to song.title, [@artist, song] %>
+<% @songs.each_with_index do |song, i| %>
+    <%= "#{i+1}. \t"  %>
+    <%= link_to song.title, [@artist, song] %> <br />
     <% end %>
