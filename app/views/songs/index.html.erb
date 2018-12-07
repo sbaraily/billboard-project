@@ -1,6 +1,6 @@
 <h1>&emsp;SONGS</h1>
 <div class="ui divider"></div>
-&emsp;<%="The List of Songs Added : " %><br /> <br />
+&emsp;<%="The List of Songs Added for #{@artist.name} : " %><br /> <br />
 <% @songs.each_with_index do |song, i| %>
     &emsp;<%= "#{i+1}. \t"  %>
     <%= link_to song.title, [@artist, song] %> <br />
