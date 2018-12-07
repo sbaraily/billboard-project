@@ -23,14 +23,17 @@ ActiveRecord::Schema.define(version: 2018_11_30_013618) do
 
   create_table "songs", force: :cascade do |t|
     t.string "title"
-    t.integer "artist_id"
+    t.bigint "artist_id"
     t.boolean "hit"
+    t.bigint "top_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["artist_id"], name: "index_songs_on_artist_id"
+    t.index ["top_id"], name: "index_songs_on_top_id"
   end
 
   create_table "tops", force: :cascade do |t|
-    t.string "song_id"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

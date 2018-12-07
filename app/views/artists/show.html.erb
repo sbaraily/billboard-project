@@ -1,9 +1,10 @@
+
 <h1>&emsp; Artists</h1>
 <h2><%= @artist.name %></h2>
-<%= link_to 'View Artist', artists_path(@artist) %> | 
-<%= link_to 'Edit Artist', edit_artist_path(@artist) %> | 
-<%= link_to 'Delete Artist', @artist, method: :delete %> | 
+<%= link_to 'View Artist', artists_path(@artist), class: "ui blue basic button"%>
+<%= link_to 'Edit Artist', edit_artist_path(@artist), class: "ui blue basic button" %> 
+<%= link_to 'Delete Artist', @artist, method: :delete, class: "ui blue basic button" %>
 
 
-<%= link_to 'View Songs', artist_songs_path(@artist) %>
-
+<%= link_to 'View Songs', artist_songs_path(@artist) , class: "ui green basic button"%>
+<%= link_to 'Add a New Song', new_artist_song_path(@artist) , class: "ui green basic button"%>

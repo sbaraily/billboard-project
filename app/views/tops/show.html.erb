@@ -1,16 +1,15 @@
 <h1><%= @top.name %></h1>
 
+<div class="ui divider"></div>
 
-<br />
-<br />
-<%= link_to 'Edit Top Chart', edit_top_path(@top) %>
+<%= link_to 'Edit Top Chart', edit_top_path(@top), class: "ui red basic button" %>
 
-<br />
-<br />
-<%= link_to 'Delete Top Chart', @top, method: :delete %>
+<%= link_to 'Delete Top Chart', @top, method: :delete , class: "ui red basic button" %>
 
-<br />
-<br />
-<%= link_to 'Back to Main Page', root_path %>
+<%= link_to 'Back to Main Page', root_path, class: "ui red basic button" %> <br /><br/>
+
+<%= link_to 'Add new Song', new_artist_song_path(:id), class: "ui blue basic button" %>
+
+</div>
 
 
