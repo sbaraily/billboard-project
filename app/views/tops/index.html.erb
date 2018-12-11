@@ -1,5 +1,7 @@
 <h1>&nbsp;Billboard Top Charts</h1>
 <div class="ui divider"></div>
+<%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "ui black basic button" %>
+<br />
 <%= link_to "Add New Artist" , new_artist_path , class: "ui red basic button"%>
 <%= link_to "Add New Chart", new_top_path	, class: "ui red basic button" %>
 
